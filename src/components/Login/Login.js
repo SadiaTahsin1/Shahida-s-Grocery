@@ -5,6 +5,7 @@ import firebaseConfig from './firebase.config';
 import {UserContext} from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from "@fortawesome/free-brands-svg-icons"
 
 
 const Login = () => {
@@ -33,7 +34,7 @@ const Login = () => {
     return (
         <div>
            
-            <button onClick={handleGoogleSignIn} style={{margin:"15% 25%",width:"40%",height:"60px"}}><FontAwesomeIcon icon={['fab', 'google']} color="green"/>Sign in with Google</button>
+            <button onClick={handleGoogleSignIn} style={{margin:"15% 25%",width:"40%",height:"60px"}}><FontAwesomeIcon icon={faGoogle} color="green"/>   Sign in with Google</button>
         </div>
     );
 };

@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { useForm } from "react-hook-form";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt} from '@fortawesome/free-solid-svg-icons';
 
 const AddItems = () => {
   const { register, handleSubmit, watch, errors } = useForm();
