@@ -6,7 +6,7 @@ const ManageProduct = () => {
     const [items, setItems] = useState([]);
    
         useEffect(() => {
-           fetch('https://obscure-basin-97858.herokuapp.com/events')
+           fetch('https://obscure-basin-97858.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data))
         }, [])
@@ -17,7 +17,7 @@ const ManageProduct = () => {
        
      }
      const handleSelection1=()=>{
-       history.push('/addEvents');
+       history.push('/addItems');
        
      }
        return (

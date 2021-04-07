@@ -9,7 +9,7 @@ const Checkout = () => {
     const {_id} = useParams();
     const [product,setProduct]=useState({});
     useEffect(()=>{
-        fetch(`https://obscure-basin-97858.herokuapp.com/event/${_id}`)
+        fetch(`https://obscure-basin-97858.herokuapp.com/item/${_id}`)
         .then(res=>res.json())
         .then(data=>setProduct(data));
     },[_id])

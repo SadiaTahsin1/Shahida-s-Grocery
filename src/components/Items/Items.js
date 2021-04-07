@@ -2,8 +2,8 @@ import React,{useContext} from 'react';
 import { useHistory } from 'react-router';
 import { Button,Card } from 'react-bootstrap';
 
-const Events = ({event}) => {
-    console.log(event)
+const Events = ({item}) => {
+    console.log(item)
     const history=useHistory();
     const handleSelection=(_id)=>{
         history.push(`/checkout/${_id}`);
@@ -12,18 +12,15 @@ const Events = ({event}) => {
     return (
         <div className="col-md-3" style={{padding:"10px"}}>
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={event.imageURL} />
+        <Card.Img variant="top" src={item.imageURL} style={{ height:"286px" }}/>
         <Card.Body>
-            <Card.Title>{event.name}</Card.Title>
+            <Card.Title>{item.name}</Card.Title>
             <Card.Text>
-             ${event.price}
+             ${item.price}
             </Card.Text>
-            <Button variant="primary" onClick={()=>handleSelection(event._id)}>Buy Now</Button>
+            <Button variant="primary" onClick={()=>handleSelection(item._id)}>Buy Now</Button>
         </Card.Body>
         </Card>
-            {/* <img style={{height: '300px'}} src={event.imageURL} alt=""/>
-            <h3>{event.name}</h3> */}
-            
         </div>
     );
 };

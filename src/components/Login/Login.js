@@ -33,8 +33,7 @@ const Login = () => {
     return (
         <div>
            
-            <button onClick={handleGoogleSignIn} style={{margin:"15% 25%",width:"40%",height:"60px"}}>
-                <FontAwesomeIcon icon={['fab', 'google']} color="green"/>Sign in with Google</button>
+            <button onClick={handleGoogleSignIn} style={{margin:"15% 25%",width:"40%",height:"60px"}}><FontAwesomeIcon icon={['fab', 'google']} color="green"/>Sign in with Google</button>
         </div>
     );
 };

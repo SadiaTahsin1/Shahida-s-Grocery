@@ -8,7 +8,7 @@ import {
   Link
 } from "react-router-dom";
 
-import AddEvents from './components/AddEvents/AddEvents';
+import AddItems from './components/AddItems/AddItems';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login'
 import Header from './components/Header/Header';
@@ -31,8 +31,8 @@ const [loggedInUser, setLoggedInUser] = useState({});
           <Route exact path="/">
             <Home />
           </Route>
-          <PrivateRoute path="/addEvents">
-            <AddEvents />
+          <PrivateRoute path="/addItems">
+            <AddItems />
           </PrivateRoute>
           <PrivateRoute path="/checkout/:_id">
             <Checkout />

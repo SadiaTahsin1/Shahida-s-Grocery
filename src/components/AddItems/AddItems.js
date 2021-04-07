@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { useForm } from "react-hook-form";
 
-const AddEvents = () => {
+const AddItems = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const [imageURL, setIMageURL] = useState(null);
 
@@ -15,7 +15,7 @@ const AddEvents = () => {
       price:data.price,
       imageURL: imageURL
     };
-    const url = `https://obscure-basin-97858.herokuapp.com/addEvent`;
+    const url = `https://obscure-basin-97858.herokuapp.com/addItem`;
     
     fetch(url, {
       method: 'POST', 
@@ -49,7 +49,7 @@ const AddEvents = () => {
       
     }
     const handleSelection1=()=>{
-      history.push('/addEvents');
+      history.push('/addItems');
       
     }
   return (
@@ -78,4 +78,4 @@ const AddEvents = () => {
   );
 };
 
-export default AddEvents;
+export default AddItems;
