@@ -53,15 +53,16 @@ const AddEvents = () => {
       
     }
   return (
-    <div style={{display:"flex",margin:"5%",padding:"5%"}}>
+    <div style={{display:"grid",gridTemplateColumns:"30% 60%",gridTemplateRows:"100%",marginLeft:"5%"}}>
       
-      <div style={{width:"30%",padding:"5%",height:"100%",backgroundColor:"navy",color:"white"}}>
-        <h3><a onClick={()=>handleSelection()}>Manage Product</a></h3><br></br>
-        <h3><a onClick={()=>handleSelection1()}>Add Product</a></h3><br></br>
+      <div style={{padding:"10%",backgroundColor:"navy",color:"white",float:"left"}}>
+        <h3><a onClick={()=>handleSelection()} style={{cursor:"pointer"}}>Manage Product</a></h3><br></br>
+        <h3><a onClick={()=>handleSelection1()} style={{cursor:"pointer"}}>Add Product</a></h3><br></br>
         <h3>Edit Product</h3>
 
       </div>
-     
+      <div style={{padding:"5%",float:"left"}}>
+      <h2>Add Product</h2>
       <form onSubmit={handleSubmit(onSubmit)} style={{padding:"5%",margin:"2%"}}>
       
       <input name="name" placeholder="Product Name" ref={register} />
@@ -71,6 +72,8 @@ const AddEvents = () => {
       <br></br>
       <input type="submit" />
     </form>
+      </div>
+     
     </div>
   );
 };

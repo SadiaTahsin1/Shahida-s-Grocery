@@ -10,7 +10,7 @@ const Events = ({event}) => {
        
       }
     return (
-        <div className="col-md-3">
+        <div className="col-md-3" style={{padding:"10px"}}>
         <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={event.imageURL} />
         <Card.Body>
@@ -18,7 +18,7 @@ const Events = ({event}) => {
             <Card.Text>
              ${event.price}
             </Card.Text>
-            <Button variant="primary" onClick={()=>handleSelection(event._id)}>Buy</Button>
+            <Button variant="primary" onClick={()=>handleSelection(event._id)}>Buy Now</Button>
         </Card.Body>
         </Card>
             {/* <img style={{height: '300px'}} src={event.imageURL} alt=""/>

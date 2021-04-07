@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash,faEdit} from '@fortawesome/free-solid-svg-icons';
 
 const HandleProduct = ({i}) => {
    const deleteItem=id=>{
@@ -11,11 +12,13 @@ const HandleProduct = ({i}) => {
     return (
         <div>
        
-           <table style={{textAlign:"center"}}>
-           <tr><td>{i.name}</td>
-           <td>{i.weight}</td>
-           <td>${i.price}</td>
-           <td><button onClick={()=>deleteItem(i._id)}>Delete</button></td></tr>
+           <table>
+           <tr><td style={{width:"120px",textAlign:"center"}}>{i.name}</td>
+           <td style={{width:"120px",textAlign:"center"}}>{i.weight}</td>
+           <td style={{width:"120px",textAlign:"center"}}>${i.price}</td>
+          
+
+           <td style={{width:"120px",textAlign:"center"}}><button><FontAwesomeIcon icon={faEdit} /><FontAwesomeIcon icon={faTrash} onClick={()=>deleteItem(i._id)}/></button></td></tr>
           </table> 
         </div>
     );
